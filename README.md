@@ -12,7 +12,7 @@ Records: 10,000 customers
 
 Target Column: Exited (1 = churned, 0 = retained)
 
-**Key Features:**
+**Key Features**
 
 Geography, Gender, Age, CreditScore
 
@@ -20,7 +20,7 @@ Tenure, Balance, NumOfProducts
 
 HasCrCard, IsActiveMember, EstimatedSalary
 
-🧠** Key SQL Queries & Insights**
+**🧠 Key SQL Queries & Insights**
 
 1️⃣ Overall Churn Rate
 
@@ -36,7 +36,7 @@ HasCrCard, IsActiveMember, EstimatedSalary
 
 7️⃣ High-Value Customers at Risk
 
-📈** Tools Used**
+**📈 Tools Used**
 
  Snowflake (Cloud Data Warehouse)
 
