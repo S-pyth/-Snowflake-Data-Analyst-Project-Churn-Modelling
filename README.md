@@ -19,3 +19,27 @@ Geography, Gender, Age, CreditScore
 Tenure, Balance, NumOfProducts
 
 HasCrCard, IsActiveMember, EstimatedSalary
+
+🧠** Key SQL Queries & Insights**
+
+1️⃣ Overall Churn Rate
+
+2️⃣ Churn by Geography
+
+3️⃣ Churn by Age Group
+
+4️⃣ Churn vs Active Membership
+
+5️⃣ Product Holding and Churn
+
+6️⃣ Gender-wise Churn
+
+7️⃣ High-Value Customers at Risk
+
+📈** Tools Used**
+
+ Snowflake (Cloud Data Warehouse)
+
+ SQL
+
+ CSV Data
