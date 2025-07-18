@@ -1,15 +1,15 @@
 ️/* Overall Churn Rate*/
 SELECT COUNT(*) AS total_customers,
-       SUM(CASE WHEN Exited THEN 1 ELSE 0 END) AS churned_customers,
-       ROUND(SUM(CASE WHEN Exited THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS churn_rate
+       SUM(CASE WHEN Exited = 1 THEN 1 ELSE 0 END) AS churned_customers,
+       ROUND(SUM(CASE WHEN Exited = 1 THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS churn_rate
 FROM churn_modelling;
 --output:~20% of customers have churned.
 
 /*Churn by Geography*/
 SELECT Geography,
        COUNT(*) AS total,
-       SUM(CASE WHEN Exited THEN 1 ELSE 0 END) AS churned,
-       ROUND(SUM(CASE WHEN Exited THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS churn_rate
+       SUM(CASE WHEN Exited = 1 THEN 1 ELSE 0 END) AS churned,
+       ROUND(SUM(CASE WHEN Exited = 1 THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS churn_rate
 FROM churn_modelling
 GROUP BY Geography;
 --output:Germany has the highest churn rate among all countries.
@@ -30,8 +30,8 @@ GROUP BY age_group;
 /*Churn vs Active Membership*/
 SELECT IsActiveMember,
        COUNT(*) AS total_customers,
-       SUM(CASE WHEN Exited THEN 1 ELSE 0 END) AS churned,
-       ROUND(SUM(CASE WHEN Exited THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS churn_rate
+       SUM(CASE WHEN Exited = 1 THEN 1 ELSE 0 END) AS churned,
+       ROUND(SUM(CASE WHEN Exited = 1 THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS churn_rate
 FROM churn_modelling
 GROUP BY IsActiveMember;
 --output:Inactive members are more likely to churn.
@@ -39,8 +39,8 @@ GROUP BY IsActiveMember;
 /*Inactive members are more likely to churn*/
 SELECT NumOfProducts,
        COUNT(*) AS total,
-       SUM(CASE WHEN Exited THEN 1 ELSE 0 END) AS churned,
-       ROUND(SUM(CASE WHEN Exited THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS churn_rate
+       SUM(CASE WHEN Exited = 1 THEN 1 ELSE 0 END) AS churned,
+       ROUND(SUM(CASE WHEN Exited = 1 THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS churn_rate
 FROM churn_modelling
 GROUP BY NumOfProducts;
 --output:Customers with 3+ products have a significantly higher churn rate
@@ -48,8 +48,8 @@ GROUP BY NumOfProducts;
 /*Gender-wise Churn*/
 SELECT Gender,
        COUNT(*) AS total_customers,
-       SUM(CASE WHEN Exited THEN 1 ELSE 0 END) AS churned,
-       ROUND(SUM(CASE WHEN Exited THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS churn_rate
+       SUM(CASE WHEN Exited = 1 THEN 1 ELSE 0 END) AS churned,
+       ROUND(SUM(CASE WHEN Exited = 1 THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS churn_rate
 FROM churn_modelling
 GROUP BY Gender;
 --output: Churn rate is slightly higher among female customers.
