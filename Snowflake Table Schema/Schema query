@@ -1,0 +1,15 @@
+CREATE OR REPLACE TABLE churn_customers (
+    CustomerID INT,
+    Surname STRING,
+    CreditScore INT,
+    Geography STRING,
+    Gender STRING,
+    Age INT,
+    Tenure INT,
+    Balance FLOAT,
+    NumOfProducts INT,
+    HasCrCard BOOLEAN,
+    IsActiveMember BOOLEAN,
+    EstimatedSalary FLOAT,
+    Exited BOOLEAN
+);
