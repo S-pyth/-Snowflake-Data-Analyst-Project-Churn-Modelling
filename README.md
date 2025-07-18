@@ -39,7 +39,19 @@ HasCrCard, IsActiveMember, EstimatedSalary
 **📈 Tools Used**
 
  Snowflake (Cloud Data Warehouse)
-
+ 
  SQL
 
  CSV Data
+ 
+**📌 Business Recommendations**
+ 
+🧍 Target German customers with loyalty incentives.
+
+🔁 Engage inactive users with personalized emails or offers.
+
+🛍️ Upsell customers with 1 product to increase stickiness.
+
+🧓 Older customers with high balances are at risk – personalize support.
+
+
